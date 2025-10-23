@@ -4,17 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <title>Face Liveness Demo</title>
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <h1>Face Recognition + Liveness Demo</h1>
-    <video id="video" width="640" height="480" autoplay playsinline></video>
-    <canvas id="canvas" width="640" height="480" style="display:none"></canvas>
-    <div>
-        <button id="start">Start</button>
-        <button id="capture">Capture & Recognize</button>
-        <label><input id="multi" type="checkbox" checked /> Allow multiple faces</label>
+    <h1>Face Recognition</h1>
+
+    <div class="container">
+        <video id="video" width="640" height="480" autoplay playsinline></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="capture">Capture & Recognize</button>
+            <label><input id="multi" type="checkbox" checked /> Allow multiple faces</label>
+        </div>
+
+        <div id="result-container">
+            <p>Hasil akan tampil di sini...</p>
+        </div>
     </div>
-    <pre id="result"></pre>
+
     <script src="/js/webcam.js"></script>
 </body>
 </html>
