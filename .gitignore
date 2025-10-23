@@ -1,0 +1,114 @@
+# ## General Visual Studio ##
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ## Build Artifacts ##
+[Bb]in/
+[Oo]bj/
+
+# ## NuGet Packages ##
+packages/
+*.nupkg
+# Exclude the NuGet config file too, but keep the packages.config file
+*.nuget.props
+*.nuget.targets
+# Keep nuget.config for package source mapping
+# !nuget.config
+
+# ## IDE specific files ##
+.vs/
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# ## User specific files ##
+*.DotSettings.user
+
+# ## Environment files ##
+.env
+appsettings.Development.json
+secrets.json
+
+# ## Docker specific files ##
+docker-compose.override.yml
+docker-compose.*.yml
+.dockerignore
+
+# ## Generated files ##
+# Generally, exclude generated files. You might want to keep some, depending on your workflow.
+# For EF Migrations, we typically DO commit the Migrations folder.
+
+# ## Operating System files ##
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# macOS thumbnail cache files
+.DS_Store
+
+# ## Log files ##
+*.log
+logs/
+spoof_logs/ # Exclude generated spoof logs
+
+# ## Test results ##
+TestResults/
+*.trx
+
+# ## Database files (like SQLite, keep if needed) ##
+# *.db
+# *.db3
+
+# ## Other specific exclusions ##
+# Example: If you have a local config file not to be committed
+# local-config.json
+
+
+# File khusus OS
+.DS_Store
+Thumbs.db
+
+# .NET / Visual Studio
+## Abaikan file spesifik pengguna
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Abaikan output build
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+## Abaikan cache dan pengaturan Visual Studio
+.vs/
+.idea/
+*.dotsettings
+.vsconfig
+
+# Python
+## Abaikan virtual environments
+venv/
+*.venv/
+.env/
+env/
+ENV/
+
+## Abaikan file cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

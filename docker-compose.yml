@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  vision:
+    build:
+      context: ./vision
+      dockerfile: Dockerfile
+    container_name: face_vision
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  webapi:
+    build:
+      context: .
+      dockerfile: FaceLiveness.Api/Dockerfile
+    container_name: face_api
+    ports:
+      - "8080:80"
+    environment:
+      - VISION_BASEURL=http://vision:5000
+      - ASPNETCORE_URLS=http://+:80
+    depends_on:
+      - vision
+    restart: unless-stopped
